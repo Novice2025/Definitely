@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="main-title">O Guia do "Definitely"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            background-image: radial-gradient(circle at top, #1e293b, #0f172a);
+        }
+        .container-card {
+            background-color: #1e293b;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border-left: 6px solid #4a90e2;
+            max-width: 50rem;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container-card:hover {
+            transform: translateY(-5px);
+        }
+        .phrase-block {
+            background-color: #2b3a53;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #475569;
+            transition: all 0.2s ease-in-out;
+        }
+        .phrase-block:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .copy-btn {
+            background-color: #475569;
+            color: #e2e8f0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            float: right;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .copy-btn:hover {
+            background-color: #64748b;
+        }
+        #message-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2b3a53;
+            color: #e2e8f0;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .show {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 lg:p-16">
+
+    <!-- Language Switch Button -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="language-toggle" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+            EN
+        </button>
+    </div>
+
+    <div class="space-y-12 max-w-5xl mx-auto">
+        
+        <!-- Main title and explanation -->
+        <div class="container-card text-center">
+            <div class="phrase-block">
+                <h1 id="main-header" class="text-3xl font-extrabold text-white mb-4 flex items-center justify-center">
+                    <span class="mr-3">✨</span> <span id="main-title-text">O Guia do "Definitely"</span>
+                </h1>
+                <p id="main-text" class="text-lg leading-relaxed text-gray-300">
+                    A palavra **"definitely"** é uma ferramenta poderosa em inglês, usada para dar ênfase e expressar certeza. Conhecer suas diferentes aplicações pode elevar sua fluência e clareza na comunicação. Vamos explorar seus usos mais comuns em contextos reais.
+                </p>
+            </div>
+        </div>
+        
+        <!-- New Section: Definitely vs. Absolutely -->
+        <div class="container-card border-l-yellow-400">
+            <h2 id="comparison-title" class="text-2xl font-bold text-white mb-4 text-center">Definitely vs. Absolutely: Quando Usar?</h2>
+            <div id="comparison-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Esta é a sua dúvida mais importante! Para um falante nativo, **"definitely"** e **"absolutely"** são frequentemente sinônimos e podem ser usados de forma intercambiável, mas existem algumas diferenças sutis.
+            </div>
+            
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="c-equal-title" class="font-bold text-xl text-yellow-400 mb-2">Intercambiáveis: Para Concordância Forte ou Ênfase</h3>
+                    <p class="text-gray-200 italic mb-4" id="c-equal-text">
+                        Quando você concorda totalmente com algo ou quer enfatizar que algo é 100% verdadeiro, você pode usar **qualquer um** dos dois.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li id="c-equal-example1-li">
+                            <span id="c-equal-example1-text">"You're **definitely** right."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-equal-example1-meaning">Significado: "Você está **com certeza** certo."</span>
+                        </li>
+                        <li id="c-equal-example2-li">
+                            <span id="c-equal-example2-text">"You're **absolutely** right."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-equal-example2-meaning">Significado: "Você está **com certeza** certo."</span>
+                        </li>
+                        <li id="c-equal-example3-li">
+                            <span id="c-equal-example3-text">"That's **definitely** what happened."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-equal-example3-meaning">Significado: "Foi **exatamente** isso que aconteceu."</span>
+                        </li>
+                        <li id="c-equal-example4-li">
+                            <span id="c-equal-example4-text">"That's **absolutely** what happened."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-equal-example4-meaning">Significado: "Foi **exatamente** isso que aconteceu."</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="phrase-block">
+                    <h3 id="c-not-equal-title" class="font-bold text-xl text-yellow-400 mb-2">Não Intercambiáveis: Diferenças Sutis</h3>
+                    <p class="text-gray-200 italic mb-4" id="c-not-equal-text">
+                        Use **"definitely"** para falar sobre intenções, planos ou ações futuras. Use **"absolutely"** como uma resposta curta e mais dramática, ou para se referir a uma condição absoluta.
+                    </p>
+                    <ul class="list-disc list-inside space-y-4 text-gray-300">
+                        <li id="c-not-equal-example1-li">
+                            <span id="c-not-equal-example1-text">"I'm **definitely** going to the party."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-not-equal-example1-meaning">Significado: "Eu **com certeza** vou à festa." (Plano)</span>
+                            <br><span class="text-sm italic text-gray-500" id="c-not-equal-example1-note">*(Não se usa "I'm absolutely going..." para um plano.)*</span>
+                        </li>
+                        <li id="c-not-equal-example2-li">
+                            <span id="c-not-equal-example2-text">"She **definitely** wants to join the team."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-not-equal-example2-meaning">Significado: "Ela **com certeza** quer entrar para o time." (Intenção)</span>
+                        </li>
+                        <li id="c-not-equal-example3-li">
+                            <span id="c-not-equal-example3-text">"That is **absolutely** outrageous!"</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-not-equal-example3-meaning">Significado: "Isso é **completamente** ultrajante!" (Ênfase dramática)</span>
+                            <br><span class="text-sm italic text-gray-500" id="c-not-equal-example3-note">*(Aparece mais em conversas ou respostas dramáticas.)*</span>
+                        </li>
+                        <li id="c-not-equal-example4-li">
+                            <span id="c-not-equal-example4-text">"This cake is **absolutely** delicious!"</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-not-equal-example4-meaning">Significado: "Esse bolo está **completamente** delicioso!" (Ênfase positiva)</span>
+                        </li>
+                        <li id="c-not-equal-example5-li">
+                            <span id="c-not-equal-example5-text">"A: Is this movie a masterpiece? B: **Absolutely**."</span>
+                            <br><span class="text-sm italic text-gray-400" id="c-not-equal-example5-meaning">Significado: "A: Esse filme é uma obra-prima? B: **Com certeza**." (Resposta curta e forte)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: To express strong agreement (Sim, com certeza) -->
+        <div class="container-card border-l-green-400">
+            <h2 id="section1-title" class="text-2xl font-bold text-white mb-4 text-center">1. Expressar Concordância Forte</h2>
+            <div id="section1-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Este é o uso mais comum de **"definitely"**. É uma resposta direta e enfática, que funciona como "sim, com certeza" ou "totalmente".
+            </div>
+
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="s1-e1-title" class="font-bold text-xl text-emerald-400 mb-2">Exemplo 1: "Definitely!"</h3>
+                    <p class="text-gray-200 italic mb-2">
+                        <span id="s1-e1-q">- "Are you sure you want to go?"</span>
+                    </p>
+                    <p class="text-gray-200 italic mb-4">
+                        <span id="s1-e1-a">- "**Definitely!**"</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s1-e1-meaning-title">O que realmente está acontecendo:</span> <span id="s1-e1-meaning">Essa é uma resposta super comum e informal para mostrar que você não tem nenhuma dúvida sobre algo. É como dizer "Sim, com certeza!"</span>
+                    </p>
+                </div>
+                
+                <div class="phrase-block">
+                    <h3 id="s1-e2-title" class="font-bold text-xl text-emerald-400 mb-2">Exemplo 2: Usando `Definitely` em uma frase</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('You\'re definitely right.')" id="s1-e2-copy">Copiar</button>
+                        <span id="s1-e2-text">"You're **definitely** right."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s1-e2-meaning-title">O que realmente está acontecendo:</span> <span id="s1-e2-meaning">Você está confirmando a opinião da outra pessoa com 100% de confiança, sem espaço para discussão. Em português, seria "Você está **totalmente** certo."</span>
+                    </p>
+                </div>
+                
+                <div class="phrase-block">
+                    <h3 id="s1-e3-title" class="font-bold text-xl text-emerald-400 mb-2">Exemplo 3: Concordando com uma opinião</h3>
+                    <p class="text-gray-200 italic mb-2">
+                        <span id="s1-e3-q">- "Do you agree with her?"</span>
+                    </p>
+                    <p class="text-gray-200 italic mb-4">
+                        <span id="s1-e3-a">- "**Definitely**, she's right."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s1-e3-meaning-title">O que realmente está acontecendo:</span> <span id="s1-e3-meaning">Você não só concorda, mas reforça a sua posição. É uma forma de dizer "Com certeza, ela está certa."</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2: To mean "completely" or "totally" (Totalmente/Completamente) -->
+        <div class="container-card border-l-blue-400">
+            <h2 id="section2-title" class="text-2xl font-bold text-white mb-4 text-center">2. Como um Intensificador</h2>
+            <div id="section2-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Neste caso, **"definitely"** atua como um advérbio que intensifica o significado de adjetivos e verbos, similar a "completamente" ou "totalmente".
+            </div>
+
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="s2-e1-title" class="font-bold text-xl text-sky-400 mb-2">Exemplo 1: Intensificando um adjetivo</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('It\'s a definitely amazing movie.')" id="s2-e1-copy">Copiar</button>
+                        <span id="s2-e1-text">"It's a **definitely** amazing movie."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s2-e1-meaning-title">O que realmente está acontecendo:</span> <span id="s2-e1-meaning">Você está elevando o adjetivo "amazing" (incrível) para o nível máximo. A tradução seria "É um filme **realmente** incrível." ou "**completamente** incrível".</span>
+                    </p>
+                </div>
+                
+                <div class="phrase-block">
+                    <h3 id="s2-e2-title" class="font-bold text-xl text-sky-400 mb-2">Exemplo 2: Intensificando um verbo</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('The concert was definitely fantastic.')" id="s2-e2-copy">Copiar</button>
+                        <span id="s2-e2-text">"The concert was **definitely** fantastic."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s2-e2-meaning-title">O que realmente está acontecendo:</span> <span id="s2-e2-meaning">Você está afirmando com ênfase que o show foi fantástico, sem dúvida. Em português, seria "O show foi **com certeza** fantástico."</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: To express a lack of doubt (Sem dúvida) -->
+        <div class="container-card border-l-purple-400">
+            <h2 id="section3-title" class="text-2xl font-bold text-white mb-4 text-center">3. Para Expressar Ausência de Dúvida</h2>
+            <div id="section3-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Quando algo é óbvio ou evidente, você pode usar **"definitely"** para reforçar que não há espaço para dúvidas.
+            </div>
+            
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="s3-e1-title" class="font-bold text-xl text-purple-400 mb-2">Exemplo 1: Confirmando um fato óbvio</h3>
+                    <p class="text-gray-200 italic mb-2">
+                        <span id="s3-e1-q">- "You're tired, aren't you?"</span>
+                    </p>
+                    <p class="text-gray-200 italic mb-4">
+                        <span id="s3-e1-a">- "**Definitely.**"</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s3-e1-meaning-title">O que realmente está acontecendo:</span> <span id="s3-e1-meaning">Essa é uma resposta curta e direta que diz "Sim, é óbvio". É como dizer "Sim, **sem dúvida**."</span>
+                    </p>
+                </div>
+                
+                <div class="phrase-block">
+                    <h3 id="s3-e2-title" class="font-bold text-xl text-purple-400 mb-2">Exemplo 2: Confirmando uma posição</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('He is definitely the best candidate for the job.')" id="s3-e2-copy">Copiar</button>
+                        <span id="s3-e2-text">"He is **definitely** the best candidate for the job."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s3-e2-meaning-title">O que realmente está acontecendo:</span> <span id="s3-e2-meaning">Você está declarando sua opinião de forma irrefutável. É uma forma mais enfática de dizer "Com certeza, ele é o melhor..."</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: As a negative intensifier (Absolutamente não) -->
+        <div class="container-card border-l-red-400">
+            <h2 id="section4-title" class="text-2xl font-bold text-white mb-4 text-center">4. Como Intensificador Negativo</h2>
+            <div id="section4-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Embora menos comum, **"definitely"** também pode ser usado com palavras negativas como **"not"** para reforçar uma negação.
+            </div>
+            
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="s4-e1-title" class="font-bold text-xl text-rose-400 mb-2">Exemplo 1: Negando um plano</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('I am definitely not going to that party.')" id="s4-e1-copy">Copiar</button>
+                        <span id="s4-e1-text">"I am **definitely not** going to that party."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s4-e1-meaning-title">O que realmente está acontecendo:</span> <span id="s4-e1-meaning">Você está afirmando com total certeza que não vai fazer algo. Em português, seria "**Definitivamente não** vou a essa festa."</span>
+                    </p>
+                </div>
+                
+                <div class="phrase-block">
+                    <h3 id="s4-e2-title" class="font-bold text-xl text-rose-400 mb-2">Exemplo 2: Negando uma possibilidade</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('There is definitely no reason to worry.')" id="s4-e2-copy">Copiar</button>
+                        <span id="s4-e2-text">"There is **definitely no** reason to worry."</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s4-e2-meaning-title">O que realmente está acontecendo:</span> <span id="s4-e2-meaning">Você está tranquilizando a outra pessoa, dizendo que não há motivo **algum** para preocupação. É uma negação bem forte.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Section: Final Hint for Brazilians -->
+        <div class="container-card border-l-orange-400">
+            <h2 id="final-hint-title" class="text-2xl font-bold text-white mb-4 text-center">Dica Final para Falantes de Português</h2>
+            <div id="final-hint-description" class="text-lg leading-relaxed text-gray-300 mb-8">
+                Em português, usamos "definitivamente" em contextos mais formais ou para dar um tom de conclusão, como em "ele se decidiu definitivamente". Em inglês, **"definitely"** é muito mais comum e casual, especialmente em conversas. Ele pode ser a resposta perfeita para perguntas simples, funcionando como um "claro!" ou "com certeza!". 
+            </div>
+
+            <div class="space-y-6">
+                <div class="phrase-block">
+                    <h3 id="s5-e1-title" class="font-bold text-xl text-orange-400 mb-2">Exemplo para prática</h3>
+                    <p class="text-gray-200 italic mb-2">
+                        <span id="s5-e1-q">- "Can you meet for coffee tomorrow?"</span>
+                    </p>
+                    <p class="text-gray-200 italic mb-4">
+                        <span id="s5-e1-a">- "**Definitely.** What time works for you?"</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s5-e1-meaning-title">Tradução cultural:</span> <span id="s5-e1-meaning">"Você pode se encontrar para um café amanhã?" / "**Claro.** Que horas você pode?"</span>
+                    </p>
+                </div>
+                <div class="phrase-block">
+                    <h3 id="s5-e2-title" class="font-bold text-xl text-orange-400 mb-2">Outro exemplo</h3>
+                    <p class="text-gray-200 italic mb-4">
+                        <button class="copy-btn" onclick="copyToClipboard('Definitely, that\'s a great idea!')" id="s5-e2-copy">Copiar</button>
+                        <span id="s5-e2-text">"**Definitely**, that's a great idea!"</span>
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        <span class="font-bold text-sky-400" id="s5-e2-meaning-title">Equivalente em Português:</span> <span id="s5-e2-meaning">"**Com certeza**, é uma ótima ideia!"</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div id="message-box"></div>
+
+    <script>
+        const translations = {
+            pt: {
+                mainTitle: 'O Guia do "Definitely"',
+                mainText: 'A palavra **"definitely"** é uma ferramenta poderosa em inglês, usada para dar ênfase e expressar certeza. Conhecer suas diferentes aplicações pode elevar sua fluência e clareza na comunicação. Vamos explorar seus usos mais comuns em contextos reais.',
+                comparison: {
+                    title: 'Definitely vs. Absolutely: Quando Usar?',
+                    description: 'Esta é a sua dúvida mais importante! Para um falante nativo, **"definitely"** e **"absolutely"** são frequentemente sinônimos e podem ser usados de forma intercambiável, mas existem algumas diferenças sutis.',
+                    equal: {
+                        title: 'Intercambiáveis: Para Concordância Forte ou Ênfase',
+                        text: 'Quando você concorda totalmente com algo ou quer enfatizar que algo é 100% verdadeiro, você pode usar **qualquer um** dos dois.',
+                        example1: { text: '"You\'re **definitely** right."', meaning: 'Significado: "Você está **com certeza** certo."' },
+                        example2: { text: '"You\'re **absolutely** right."', meaning: 'Significado: "Você está **com certeza** certo."' },
+                        example3: { text: '"That\'s **definitely** what happened."', meaning: 'Significado: "Foi **exatamente** isso que aconteceu."' },
+                        example4: { text: '"That\'s **absolutely** what happened."', meaning: 'Significado: "Foi **exatamente** isso que aconteceu."' }
+                    },
+                    notEqual: {
+                        title: 'Não Intercambiáveis: Diferenças Sutis',
+                        text: 'Use **"definitely"** para falar sobre intenções, planos ou ações futuras. Use **"absolutely"** como uma resposta curta e mais dramática, ou para se referir a uma condição absoluta.',
+                        example1: { text: '"I\'m **definitely** going to the party."', meaning: 'Significado: "Eu **com certeza** vou à festa." (Plano)', note: '*(Não se usa "I\'m absolutely going..." para um plano.)*' },
+                        example2: { text: '"She **definitely** wants to join the team."', meaning: 'Significado: "Ela **com certeza** quer entrar para o time." (Intenção)' },
+                        example3: { text: '"That is **absolutely** outrageous!"', meaning: 'Significado: "Isso é **completamente** ultrajante!" (Ênfase dramática)', note: '*(Aparece mais em conversas ou respostas dramáticas.)*' },
+                        example4: { text: '"This cake is **absolutely** delicious!"', meaning: 'Significado: "Esse bolo está **completamente** delicioso!" (Ênfase positiva)' },
+                        example5: { text: '"A: Is this movie a masterpiece? B: **Absolutely**."', meaning: 'Significado: "A: Esse filme é uma obra-prima? B: **Com certeza**." (Resposta curta e forte)' }
+                    }
+                },
+                section1: {
+                    title: '1. Expressar Concordância Forte',
+                    description: 'Este é o uso mais comum de **"definitely"**. É uma resposta direta e enfática, que funciona como "sim, com certeza" ou "totalmente".',
+                    example1: {
+                        title: 'Exemplo 1: "Definitely!"',
+                        q: '- "Are you sure you want to go?"',
+                        a: '- "**Definitely!**"',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Essa é uma resposta super comum e informal para mostrar que você não tem nenhuma dúvida sobre algo. É como dizer "Sim, com certeza!"'
+                    },
+                    example2: {
+                        title: 'Exemplo 2: Usando `Definitely` em uma frase',
+                        text: '"You\'re **definitely** right."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está confirmando a opinião da outra pessoa com 100% de confiança, sem espaço para discussão. Em português, seria "Você está **totalmente** certo."'
+                    },
+                    example3: {
+                        title: 'Exemplo 3: Concordando com uma opinião',
+                        q: '- "Do you agree with her?"',
+                        a: '- "**Definitely**, she\'s right."',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você não só concorda, mas reforça a sua posição. É uma forma de dizer "Com certeza, ela está certa."'
+                    }
+                },
+                section2: {
+                    title: '2. Como um Intensificador',
+                    description: 'Neste caso, **"definitely"** atua como um advérbio que intensifica o significado de adjetivos e verbos, similar a "completamente" ou "totalmente".',
+                    example1: {
+                        title: 'Exemplo 1: Intensificando um adjetivo',
+                        text: '"It\'s a **definitely** amazing movie."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está elevando o adjetivo "amazing" (incrível) para o nível máximo. A tradução seria "É um filme **realmente** incrível." ou "**completamente** incrível".'
+                    },
+                    example2: {
+                        title: 'Exemplo 2: Intensificando um verbo',
+                        text: '"The concert was **definitely** fantastic."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está afirmando com ênfase que o show foi fantástico, sem dúvida. Em português, seria "O show foi **com certeza** fantástico."'
+                    }
+                },
+                section3: {
+                    title: '3. Para Expressar Ausência de Dúvida',
+                    description: 'Quando algo é óbvio ou evidente, você pode usar **"definitely"** para reforçar que não há espaço para dúvidas.',
+                    example1: {
+                        title: 'Exemplo 1: Confirmando um fato óbvio',
+                        q: '- "You\'re tired, aren\'t you?"',
+                        a: '- "**Definitely.**"',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Essa é uma resposta curta e direta que diz "Sim, é óbvio". É como dizer "Sim, **sem dúvida**."'
+                    },
+                    example2: {
+                        title: 'Exemplo 2: Confirmando uma posição',
+                        text: '"He is **definitely** the best candidate for the job."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está declarando sua opinião de forma irrefutável. É uma forma mais enfática de dizer "Com certeza, ele é o melhor..."'
+                    }
+                },
+                section4: {
+                    title: '4. Como Intensificador Negativo',
+                    description: 'Embora menos comum, **"definitely"** também pode ser usado com palavras negativas como **"not"** para reforçar uma negação.',
+                    example1: {
+                        title: 'Exemplo 1: Negando um plano',
+                        text: '"I am **definitely not** going to that party."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está afirmando com total certeza que não vai fazer algo. Em português, seria "**Definitivamente não** vou a essa festa."'
+                    },
+                    example2: {
+                        title: 'Exemplo 2: Negando uma possibilidade',
+                        text: '"There is **definitely no** reason to worry."',
+                        copy: 'Copiar',
+                        meaningTitle: 'O que realmente está acontecendo:',
+                        meaning: 'Você está tranquilizando a outra pessoa, dizendo que não há motivo **algum** para preocupação. É uma negação bem forte.'
+                    }
+                },
+                finalHint: {
+                    title: 'Dica Final para Falantes de Português',
+                    description: 'Em português, usamos "definitivamente" em contextos mais formais ou para dar um tom de conclusão, como em "ele se decidiu definitivamente". Em inglês, **"definitely"** é muito mais comum e casual, especialmente em conversas. Ele pode ser a resposta perfeita para perguntas simples, funcionando como um "claro!" ou "com certeza!". ',
+                    example1: {
+                        title: 'Exemplo para prática',
+                        q: '- "Can you meet for coffee tomorrow?"',
+                        a: '- "**Definitely.** What time works for you?"',
+                        meaningTitle: 'Tradução cultural:',
+                        meaning: '"Você pode se encontrar para um café amanhã?" / "**Claro.** Que horas você pode?"'
+                    },
+                    example2: {
+                        title: 'Outro exemplo',
+                        text: '"**Definitely**, that\'s a great idea!"',
+                        copy: 'Copiar',
+                        meaningTitle: 'Equivalente em Português:',
+                        meaning: '"**Com certeza**, é uma ótima ideia!"'
+                    }
+                }
+            },
+            en: {
+                mainTitle: 'The "Definitely" Guide',
+                mainText: 'The word **"definitely"** is a powerful tool in English, used to add emphasis and express certainty. Knowing its different applications can elevate your fluency and clarity in communication. Let\'s explore its most common uses in real-world contexts.',
+                comparison: {
+                    title: 'Definitely vs. Absolutely: When to Use?',
+                    description: 'This is the most important question! For a native speaker, **"definitely"** and **"absolutely"** are often synonymous and can be used interchangeably, but there are a few subtle differences.',
+                    equal: {
+                        title: 'Interchangeable: For Strong Agreement or Emphasis',
+                        text: 'When you completely agree with something or want to emphasize that something is 100% true, you can use **either one**.',
+                        example1: { text: '"You\'re **definitely** right."', meaning: 'Meaning: "You\'re **absolutely** right."' },
+                        example2: { text: '"You\'re **absolutely** right."', meaning: 'Meaning: "You\'re **absolutely** right."' },
+                        example3: { text: '"That\'s **definitely** what happened."', meaning: 'Meaning: "That\'s **exactly** what happened."' },
+                        example4: { text: '"That\'s **absolutely** what happened."', meaning: 'Meaning: "That\'s **exactly** what happened."' }
+                    },
+                    notEqual: {
+                        title: 'Not Interchangeable: Subtle Differences',
+                        text: 'Use **"definitely"** to talk about future intentions, plans, or actions. Use **"absolutely"** as a short, more dramatic response, or to refer to an absolute condition.',
+                        example1: { text: '"I\'m **definitely** going to the party."', meaning: 'Meaning: "I\'m **for sure** going to the party." (A plan)', note: '*(You would not typically say "I\'m absolutely going..." for a plan.)*' },
+                        example2: { text: '"She **definitely** wants to join the team."', meaning: 'Meaning: "She **for sure** wants to join the team." (Intention)' },
+                        example3: { text: '"That is **absolutely** outrageous!"', meaning: 'Meaning: "That is **completely** outrageous!" (Dramatic emphasis)', note: '*(More common in conversational or dramatic responses.)*' },
+                        example4: { text: '"This cake is **absolutely** delicious!"', meaning: 'Meaning: "This cake is **completely** delicious!" (Positive emphasis)' },
+                        example5: { text: '"A: Is this movie a masterpiece? B: **Absolutely**."', meaning: 'Meaning: "A: Is this movie a masterpiece? B: **For sure**." (Short, strong response)' }
+                    }
+                },
+                section1: {
+                    title: '1. To Express Strong Agreement',
+                    description: 'This is the most common use of **"definitely"**. It is a direct and emphatic response that works like "yes, for sure" or "totally."',
+                    example1: {
+                        title: 'Example 1: "Definitely!"',
+                        q: '- "Are you sure you want to go?"',
+                        a: '- "**Definitely!**"',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'This is a super common and informal response to show you have no doubt about something. It\'s like saying "Yes, for sure!"'
+                    },
+                    example2: {
+                        title: 'Example 2: Using `Definitely` in a phrase',
+                        text: '"You\'re **definitely** right."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are confirming the other person\'s opinion with 100% confidence, leaving no room for argument. In Portuguese, it would be "Você está **totalmente** certo."'
+                    },
+                    example3: {
+                        title: 'Example 3: Agreeing with an opinion',
+                        q: '- "Do you agree with her?"',
+                        a: '- "**Definitely**, she\'s right."',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are not just agreeing, but reinforcing your position. It is a way of saying "For sure, she is right."'
+                    }
+                },
+                section2: {
+                    title: '2. As an Intensifier',
+                    description: 'In this case, **"definitely"** acts as an adverb that strengthens the meaning of adjectives and verbs, similar to "completely" or "totally."',
+                    example1: {
+                        title: 'Example 1: Intensifying an adjective',
+                        text: '"It\'s a **definitely** amazing movie."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are elevating the adjective "amazing" to the highest level. The translation would be "É um filme **realmente** incrível." or "**completamente** incrível."'
+                    },
+                    example2: {
+                        title: 'Example 2: Intensifying a verb',
+                        text: '"The concert was **definitely** fantastic."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are emphatically stating that the show was fantastic, no doubt about it. In Portuguese, it would be "O show foi **com certeza** fantástico."'
+                    }
+                },
+                section3: {
+                    title: '3. To Express a Lack of Doubt',
+                    description: 'When something is obvious or evident, you can use **"definitely"** to reinforce that there is no room for doubt.',
+                    example1: {
+                        title: 'Example 1: Confirming an obvious fact',
+                        q: '- "You\'re tired, aren\'t you?"',
+                        a: '- "**Definitely.**"',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'This is a short, direct answer that says "Yes, it\'s obvious". It\'s like saying "Yes, **without a doubt.**"'
+                    },
+                    example2: {
+                        title: 'Example 2: Confirming a position',
+                        text: '"He is **definitely** the best candidate for the job."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are declaring your opinion in an irrefutable way. It is a more emphatic way of saying "Com certeza, ele é o melhor..."'
+                    }
+                },
+                section4: {
+                    title: '4. As a Negative Intensifier',
+                    description: 'Although less common, **"definitely"** can also be used with negative words like **"not"** to reinforce a negation.',
+                    example1: {
+                        title: 'Example 1: Denying a plan',
+                        text: '"I am **definitely not** going to that party."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are stating with total certainty that you are not going to do something. In Portuguese, it would be "**Definitivamente não** vou a essa festa."'
+                    },
+                    example2: {
+                        title: 'Example 2: Denying a possibility',
+                        text: '"There is **definitely no** reason to worry."',
+                        copy: 'Copy',
+                        meaningTitle: 'What\'s really going on:',
+                        meaning: 'You are reassuring the other person, saying that there is **absolutely no** reason to worry. It is a very strong negation.'
+                    }
+                },
+                finalHint: {
+                    title: 'Final Hint for Portuguese Speakers',
+                    description: 'In Portuguese, we use "definitivamente" in more formal contexts or to give a dramatic tone, like in "ele se decidiu definitivamente". In English, **"definitely"** is much more common and casual, especially in conversations. It can be the perfect response to simple questions, working like a "claro!" or "com certeza!". ',
+                    example1: {
+                        title: 'Example for practice',
+                        q: '- "Can you meet for coffee tomorrow?"',
+                        a: '- "**Definitely.** What time works for you?"',
+                        meaningTitle: 'Cultural translation:',
+                        meaning: '"Você pode se encontrar para um café amanhã?" / "**Claro.** Que horas você pode?"'
+                    },
+                    example2: {
+                        title: 'Another example',
+                        text: '"**Definitely**, that\'s a great idea!"',
+                        copy: 'Copy',
+                        meaningTitle: 'Portuguese equivalent:',
+                        meaning: '"**Com certeza**, é uma ótima ideia!"'
+                    }
+                }
+            }
+        };
+
+        const messageBox = document.getElementById('message-box');
+        const toggleButton = document.getElementById('language-toggle');
+        let currentLang = 'pt';
+        
+        function updateContent() {
+            const langData = translations[currentLang];
+            
+            document.getElementById('main-title').textContent = langData.mainTitle;
+            document.getElementById('main-title-text').textContent = langData.mainTitle;
+            document.getElementById('main-text').innerHTML = langData.mainText;
+
+            // Comparison Section
+            document.getElementById('comparison-title').textContent = langData.comparison.title;
+            document.getElementById('comparison-description').innerHTML = langData.comparison.description;
+            document.getElementById('c-equal-title').textContent = langData.comparison.equal.title;
+            document.getElementById('c-equal-text').textContent = langData.comparison.equal.text;
+            document.getElementById('c-equal-example1-li').innerHTML = `<span id="c-equal-example1-text">${langData.comparison.equal.example1.text}</span><br><span class="text-sm italic text-gray-400" id="c-equal-example1-meaning">${langData.comparison.equal.example1.meaning}</span>`;
+            document.getElementById('c-equal-example2-li').innerHTML = `<span id="c-equal-example2-text">${langData.comparison.equal.example2.text}</span><br><span class="text-sm italic text-gray-400" id="c-equal-example2-meaning">${langData.comparison.equal.example2.meaning}</span>`;
+            document.getElementById('c-equal-example3-li').innerHTML = `<span id="c-equal-example3-text">${langData.comparison.equal.example3.text}</span><br><span class="text-sm italic text-gray-400" id="c-equal-example3-meaning">${langData.comparison.equal.example3.meaning}</span>`;
+            document.getElementById('c-equal-example4-li').innerHTML = `<span id="c-equal-example4-text">${langData.comparison.equal.example4.text}</span><br><span class="text-sm italic text-gray-400" id="c-equal-example4-meaning">${langData.comparison.equal.example4.meaning}</span>`;
+            document.getElementById('c-not-equal-title').textContent = langData.comparison.notEqual.title;
+            document.getElementById('c-not-equal-text').textContent = langData.comparison.notEqual.text;
+            document.getElementById('c-not-equal-example1-li').innerHTML = `<span id="c-not-equal-example1-text">${langData.comparison.notEqual.example1.text}</span><br><span class="text-sm italic text-gray-400" id="c-not-equal-example1-meaning">${langData.comparison.notEqual.example1.meaning}</span><br><span class="text-sm italic text-gray-500" id="c-not-equal-example1-note">${langData.comparison.notEqual.example1.note}</span>`;
+            document.getElementById('c-not-equal-example2-li').innerHTML = `<span id="c-not-equal-example2-text">${langData.comparison.notEqual.example2.text}</span><br><span class="text-sm italic text-gray-400" id="c-not-equal-example2-meaning">${langData.comparison.notEqual.example2.meaning}</span>`;
+            document.getElementById('c-not-equal-example3-li').innerHTML = `<span id="c-not-equal-example3-text">${langData.comparison.notEqual.example3.text}</span><br><span class="text-sm italic text-gray-400" id="c-not-equal-example3-meaning">${langData.comparison.notEqual.example3.meaning}</span><br><span class="text-sm italic text-gray-500" id="c-not-equal-example3-note">${langData.comparison.notEqual.example3.note}</span>`;
+            document.getElementById('c-not-equal-example4-li').innerHTML = `<span id="c-not-equal-example4-text">${langData.comparison.notEqual.example4.text}</span><br><span class="text-sm italic text-gray-400" id="c-not-equal-example4-meaning">${langData.comparison.notEqual.example4.meaning}</span>`;
+            document.getElementById('c-not-equal-example5-li').innerHTML = `<span id="c-not-equal-example5-text">${langData.comparison.notEqual.example5.text}</span><br><span class="text-sm italic text-gray-400" id="c-not-equal-example5-meaning">${langData.comparison.notEqual.example5.meaning}</span>`;
+            
+            // Section 1
+            document.getElementById('section1-title').textContent = langData.section1.title;
+            document.getElementById('section1-description').textContent = langData.section1.description;
+            document.getElementById('s1-e1-title').textContent = langData.section1.example1.title;
+            document.getElementById('s1-e1-q').textContent = langData.section1.example1.q;
+            document.getElementById('s1-e1-a').innerHTML = langData.section1.example1.a;
+            document.getElementById('s1-e1-meaning-title').textContent = langData.section1.example1.meaningTitle;
+            document.getElementById('s1-e1-meaning').textContent = langData.section1.example1.meaning;
+            document.getElementById('s1-e2-title').textContent = langData.section1.example2.title;
+            document.getElementById('s1-e2-text').innerHTML = langData.section1.example2.text;
+            document.getElementById('s1-e2-copy').textContent = langData.section1.example2.copy;
+            document.getElementById('s1-e2-meaning-title').textContent = langData.section1.example2.meaningTitle;
+            document.getElementById('s1-e2-meaning').textContent = langData.section1.example2.meaning;
+            document.getElementById('s1-e3-title').textContent = langData.section1.example3.title;
+            document.getElementById('s1-e3-q').textContent = langData.section1.example3.q;
+            document.getElementById('s1-e3-a').innerHTML = langData.section1.example3.a;
+            document.getElementById('s1-e3-meaning-title').textContent = langData.section1.example3.meaningTitle;
+            document.getElementById('s1-e3-meaning').textContent = langData.section1.example3.meaning;
+
+            // Section 2
+            document.getElementById('section2-title').textContent = langData.section2.title;
+            document.getElementById('section2-description').textContent = langData.section2.description;
+            document.getElementById('s2-e1-title').textContent = langData.section2.example1.title;
+            document.getElementById('s2-e1-text').innerHTML = langData.section2.example1.text;
+            document.getElementById('s2-e1-copy').textContent = langData.section2.example1.copy;
+            document.getElementById('s2-e1-meaning-title').textContent = langData.section2.example1.meaningTitle;
+            document.getElementById('s2-e1-meaning').textContent = langData.section2.example1.meaning;
+            document.getElementById('s2-e2-title').textContent = langData.section2.example2.title;
+            document.getElementById('s2-e2-text').innerHTML = langData.section2.example2.text;
+            document.getElementById('s2-e2-copy').textContent = langData.section2.example2.copy;
+            document.getElementById('s2-e2-meaning-title').textContent = langData.section2.example2.meaningTitle;
+            document.getElementById('s2-e2-meaning').textContent = langData.section2.example2.meaning;
+
+            // Section 3
+            document.getElementById('section3-title').textContent = langData.section3.title;
+            document.getElementById('section3-description').textContent = langData.section3.description;
+            document.getElementById('s3-e1-title').textContent = langData.section3.example1.title;
+            document.getElementById('s3-e1-q').textContent = langData.section3.example1.q;
+            document.getElementById('s3-e1-a').innerHTML = langData.section3.example1.a;
+            document.getElementById('s3-e1-meaning-title').textContent = langData.section3.example1.meaningTitle;
+            document.getElementById('s3-e1-meaning').textContent = langData.section3.example1.meaning;
+            document.getElementById('s3-e2-title').textContent = langData.section3.example2.title;
+            document.getElementById('s3-e2-text').innerHTML = langData.section3.example2.text;
+            document.getElementById('s3-e2-copy').textContent = langData.section3.example2.copy;
+            document.getElementById('s3-e2-meaning-title').textContent = langData.section3.example2.meaningTitle;
+            document.getElementById('s3-e2-meaning').textContent = langData.section3.example2.meaning;
+
+            // Section 4
+            document.getElementById('section4-title').textContent = langData.section4.title;
+            document.getElementById('section4-description').textContent = langData.section4.description;
+            document.getElementById('s4-e1-title').textContent = langData.section4.example1.title;
+            document.getElementById('s4-e1-text').innerHTML = langData.section4.example1.text;
+            document.getElementById('s4-e1-copy').textContent = langData.section4.example1.copy;
+            document.getElementById('s4-e1-meaning-title').textContent = langData.section4.example1.meaningTitle;
+            document.getElementById('s4-e1-meaning').textContent = langData.section4.example1.meaning;
+            document.getElementById('s4-e2-title').textContent = langData.section4.example2.title;
+            document.getElementById('s4-e2-text').innerHTML = langData.section4.example2.text;
+            document.getElementById('s4-e2-copy').textContent = langData.section4.example2.copy;
+            document.getElementById('s4-e2-meaning-title').textContent = langData.section4.example2.meaningTitle;
+            document.getElementById('s4-e2-meaning').textContent = langData.section4.example2.meaning;
+
+            // Final Hint Section
+            document.getElementById('final-hint-title').textContent = langData.finalHint.title;
+            document.getElementById('final-hint-description').innerHTML = langData.finalHint.description;
+            document.getElementById('s5-e1-title').textContent = langData.finalHint.example1.title;
+            document.getElementById('s5-e1-q').textContent = langData.finalHint.example1.q;
+            document.getElementById('s5-e1-a').innerHTML = langData.finalHint.example1.a;
+            document.getElementById('s5-e1-meaning-title').textContent = langData.finalHint.example1.meaningTitle;
+            document.getElementById('s5-e1-meaning').textContent = langData.finalHint.example1.meaning;
+            document.getElementById('s5-e2-title').textContent = langData.finalHint.example2.title;
+            document.getElementById('s5-e2-text').innerHTML = langData.finalHint.example2.text;
+            document.getElementById('s5-e2-copy').textContent = langData.finalHint.example2.copy;
+            document.getElementById('s5-e2-meaning-title').textContent = langData.finalHint.example2.meaningTitle;
+            document.getElementById('s5-e2-meaning').textContent = langData.finalHint.example2.meaning;
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            toggleButton.textContent = currentLang.toUpperCase();
+            updateContent();
+        }
+
+        toggleButton.addEventListener('click', toggleLanguage);
+        updateContent();
+
+        function showMessage(text) {
+            messageBox.textContent = text;
+            messageBox.classList.add('show');
+            setTimeout(() => {
+                messageBox.classList.remove('show');
+            }, 2000);
+        }
+
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            showMessage('Texto copiado para a área de transferência!');
+        }
+    </script>
+</body>
+</html>
